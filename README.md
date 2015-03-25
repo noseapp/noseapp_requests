@@ -1,6 +1,11 @@
 # noseapp_requests
 Requests/Requests-Oauthlib extension for NoseApp library
 
+# Installation
+```
+pip install git+https://github.com/brannt/noseapp_requests.git@master
+```
+
 # Usage
 ```python
 from noseapp.ext.requests import RequestsEx, make_config
@@ -22,3 +27,6 @@ api.post('post', key1='val1') # POST form-encoded data
 api.post('post', {'key1': 'val1'}) # POST JSON data
 api.get('status/400') # raises HTTPError
 ```
+
+# Documentation
+http://noseapp-requests.readthedocs.org/
