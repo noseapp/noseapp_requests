@@ -11,7 +11,9 @@ class BaseUrlBuilder(object):
 
     def __call__(self, method, url, json_object=None, **params):
         if method not in self.SUPPORTED_METHODS:
-            raise AttributeError()
+            raise AttributeError(
+                "Method {} not supported by {}!".format(method, self.__class__)
+            )
 
         if self.base_url:
             url = urlparse.urljoin(self.base_url, url)

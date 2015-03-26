@@ -3,7 +3,7 @@ from functools import partial
 
 import requests
 
-from noseapp.datastructures import ModifyDict
+from noseapp.datastructures import ModifyDict as JsonObjectHook
 
 from .urlbuilder import BaseUrlBuilder
 
@@ -62,7 +62,7 @@ class Session(object):
             resp.raise_for_status()
 
         if self.always_return_json:
-            return resp.json(object_hook=ModifyDict)
+            return resp.json(object_hook=JsonObjectHook)
         else:
             return resp
 
