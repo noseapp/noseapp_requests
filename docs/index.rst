@@ -6,12 +6,12 @@
 Welcome to noseapp_requests's documentation!
 ============================================
 
-**noseapp_requests** is intended for use with `**noseapp**`_ library.
+**noseapp_requests** is intended for use with `noseapp`_ library.
 It provides an extension for working with HTTP requests and REST APIs,
-based on the `**requests**`_ library.
+based on the `requests`_ library.
 
-.. _**noseapp**: https://github.com/trifonovmixail/noseapp
-.. _**requests**: http://github.com/kennethreitz/requests
+.. _noseapp: https://github.com/trifonovmixail/noseapp
+.. _requests: http://github.com/kennethreitz/requests
 
 Contents:
 
