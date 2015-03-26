@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""Here be dragons."""
 import urlparse
 
 
@@ -12,9 +13,12 @@ class BaseUrlBuilder(object):
         if method not in self.SUPPORTED_METHODS:
             raise AttributeError()
 
+        if self.base_url:
+            url = urlparse.urljoin(self.base_url, url)
+
         ret_params = {
             'method': method,
-            'url': urlparse.urljoin(self.base_url, url)
+            'url': url
         }
 
         if json_object is not None:

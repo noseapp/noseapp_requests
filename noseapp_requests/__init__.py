@@ -27,7 +27,7 @@ Get an API session:
 
 >>> api = requests_ex.get_endpoint_session('httpbin', auth=('user', 'pass'))
 
-Simple GET request (if ``always_return_json`` option is set,
+Simple *GET* request (if ``always_return_json`` option is set,
 response is automatically parsed as JSON into a
 ``noseapp.datastructures.ModifyDict`` which allows access to values via dot):
 
@@ -39,21 +39,21 @@ True
 >>> r.user
 u'user'
 
-GET with query-string parameters:
+*GET* with query-string parameters:
 
 >>> api.get('get', key1='val1')
 {u'args': {u'key1': u'val1'},
  <...>
  u'url': u'http://httpbin.org/get?key1=val1'}
 
-POST form-encoded data:
+*POST* form-encoded data:
 
 >>> api.post('post', key1='val1')
 {u'form': {u'key1': u'val1'},
  <...>
  u'url': u'http://httpbin.org/post'}
 
-POST JSON data:
+*POST* JSON data:
 
 >>> api.post('post', {'key1': 'val1'})
 {u'data': u'{"key1": "val1"}',
