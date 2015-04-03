@@ -6,13 +6,17 @@ Requests/Requests-Oauthlib extension for NoseApp library
 
 ------------
 Installation
-------------::
+------------
+
+::
 
 	pip install git+https://github.com/brannt/noseapp_requests.git@master
 
 -----
 Usage
------::
+-----
+
+::
 
 	from noseapp.ext.requests import RequestsEx, make_config
 
