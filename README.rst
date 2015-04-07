@@ -10,7 +10,7 @@ Installation
 
 ::
 
-	pip install git+https://github.com/brannt/noseapp_requests.git@master
+	pip install noseapp_requests
 
 -----
 Usage
