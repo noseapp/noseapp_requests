@@ -4,7 +4,7 @@ from setuptools import setup
 from setuptools import find_packages
 
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 
 if __name__ == '__main__':
@@ -29,7 +29,7 @@ if __name__ == '__main__':
         zip_safe=False,
         platforms='any',
         install_requires=[
-            'noseapp',
+            'noseapp>=1.0.9',
             'requests==2.6.0',
         ],
         extras_require={

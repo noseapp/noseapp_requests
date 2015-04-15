@@ -3,6 +3,7 @@ from functools import partial
 
 import requests
 
+from noseapp.core import ExtensionInstaller
 from noseapp.datastructures import ModifyDict as JsonObjectHook
 
 from .urlbuilder import BaseUrlBuilder
@@ -138,6 +139,8 @@ class RequestsEx(object):
     """
     name = 'requests'
 
+    config_key = 'REQUESTS_EX'
+
     def __init__(self, *configs):
         self._endpoints = {}
 
@@ -147,6 +150,18 @@ class RequestsEx(object):
                     config['key'] = config['base_url']
 
             self._endpoints[config['key']] = Endpoint(config)
+
+    @classmethod
+    def install(cls, app):
+        configs = app.config.get(cls.config_key, tuple())
+
+        if not isinstance(configs, (list, tuple)):
+            configs = (configs, )
+
+        installer = ExtensionInstaller(cls, configs, {})
+        app.shared_extension(cls=installer)
+
+        return installer
 
     def get_endpoint_session(self, endpoint_key, **kwargs):
         """
