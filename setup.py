@@ -29,7 +29,7 @@ if __name__ == '__main__':
         zip_safe=False,
         platforms='any',
         install_requires=[
-            'noseapp',
+            'noseapp>=1.0.9',
             'requests==2.6.0',
         ],
         extras_require={
