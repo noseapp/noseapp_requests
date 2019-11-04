@@ -30,7 +30,7 @@ if __name__ == '__main__':
         platforms='any',
         install_requires=[
             'noseapp>=1.0.9',
-            'requests==2.6.0',
+            'requests==2.20.0',
         ],
         extras_require={
             'doc': ['Sphinx']
